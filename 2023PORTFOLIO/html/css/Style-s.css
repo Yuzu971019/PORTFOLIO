@@ -1,0 +1,674 @@
+/* 共用結構設定 */
+/* 頁首設定 */
+#header{
+    height: 250px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+#logo{
+    width: 140px;
+    height: 140px;
+    float: none;
+    background-image: url(logo01.png);
+    background-position: 0% 0%;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 20px;
+}
+
+/* 主選單設定 */
+/* 外觀結構 */
+#nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-right: 0;
+
+}
+#nav a{
+    font: none;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0 20px;
+}
+#nav ul{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+@media (max-width:520px){
+    #nav{
+        width: 100%;
+    }
+    #nav a{
+        margin: 0;
+    }
+}
+
+
+
+/* 內頁版面設定 */
+/* 橫幅設定 */
+.hero-image{
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    margin: 30px 0 50px 0;
+}
+.hero-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    color: var(--white);
+    letter-spacing: 2px;
+    transform: translate(-50%, -50%);
+}
+.hero-text button{
+    border: none;
+    border-radius: 20px;
+    padding: 10px 25px;
+    color: var(--white);
+    background-color: var(--blue);
+    text-align: center;
+    cursor: pointer;
+    margin-top: 15px;
+}
+.hero-text button:hover{
+    background-color: var(--white);
+    color: var(--blue);
+    box-shadow: 0 0 10px 5px var(--blue);
+    font-weight: bold;
+}
+
+/* 橫幅設定 */
+#banner{
+    width: 100%;
+    height: 540px;
+    display: flex;
+    align-items: center;
+    margin: 30px 0 50px 0;
+    overflow: hidden;
+}
+#banner img{
+    width: 100%;
+}
+/* 內容框架設定 */
+#main-content{
+    width: calc(100%-20px);
+    margin: 0 auto;
+}
+
+/* 頁尾設定 */
+#footer{
+    background-color: var(--GreenMist, #BEC693);
+    width: 100%;
+    height: auto;
+    clear: both;
+    margin: 0 auto;
+}
+#copyright{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#copyright small, #copyright a{
+    margin-left: 0px;
+    font-size: var(--size_normal);
+    color: var(--white);
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+
+/* 各頁版面設定 */
+/* 首頁版面設定 */
+/* 橫幅設定 */
+#banner{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    margin: 10px 0 20px 0;
+    overflow: hidden;
+}
+#banner img{
+    width: 100%;
+    height: auto;
+}
+
+/* 內容區塊 */
+#main-content .main-content{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.bg-home {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.5;
+}
+.home-title{
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+}
+.home-title h1{
+    letter-spacing: var(--spacing1);
+    line-height: 1;
+}
+.home-title h4{
+    font-size: var(--h6);
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+@media (max-width:520px){
+
+    .home-title h1{
+        font-size: var(--h2);
+    }
+    .home-title h4{
+        font-size: var(--normal);
+    }
+}
+@media (max-width:400px){
+    .home-title h1{
+        font-size: var(--h2);
+    }
+    .home-title h4{
+        font-size: var(--normal);
+    }
+    .bg-home {
+        height: 100%;
+        object-fit: cover;
+    }
+    #main-content .main-content{
+        height: auto;
+        overflow: visible;
+    }
+    .home-title p{
+        font-size: var(--small);
+        line-height: 1.5;
+        margin-top: 10px;
+        margin-bottom: 40px;
+    }
+}
+
+/* about版面設定 */
+#main-content .time{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+.time .ex{
+    width: 90%;
+    height: auto;
+}
+.time .pic{
+    width: 90%;
+    height: auto;
+}
+.time .pic img{
+    width: 30%;
+    height: auto;
+}
+.time .pic h4{
+    font-size: var(--h5);
+    margin-bottom: 0;
+}
+.basic, .ability, .design{
+    width: 100%;
+    border-radius: 0;
+}
+.basic h4{
+    font-size: var(--h5);
+    font-weight: 600;
+}
+.ability h6, .design h6{
+    width: 90px;
+    font-size: var(--normal);
+    font-weight: 600;
+}
+.school h6, .job h6{
+    font-size: var(--normal);
+}
+.basic .school, .basic .job{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+}
+.basic>div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skill, .target, .software{
+    width: 33.3%;
+}
+.skill li{
+    list-style: none;
+}
+@media (max-width:520px){
+    .time .pic h4{
+        font-size: var(--h6);
+        margin-bottom: 0;
+        font-weight: normal;
+    }
+    .ability{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .skill, .software, .target{
+        width: 80%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+}
+@media (max-width:400px){
+    .ex{
+        display: none;
+    }
+}
+/* WORK版面設定 */
+
+.work{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.work .view{
+    width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+.view img, .view_img img{
+    width: 100%;
+    height: 100%;
+}
+.view .view_title{
+    font-size: calc(var(--normal, 10px)*2) !important;
+}
+@media (max-width:520px){
+    .view .view_title{
+        font-size: var(--h1) !important;
+    }
+}
+/* contact版面設定 */
+.contact h4{
+    letter-spacing: 2px;
+    margin: 20px 0;  
+}
+@media (max-width:520px){
+    .contact h4{
+        line-height: 1;
+        letter-spacing: 1px;
+        margin: 20px 0;  
+    }
+    .content p{
+        margin: 20px 0;
+    }
+}
+
+
+/* WORK1-1版面設定 */
+#main-content .con{
+    width: 100%;
+    height: auto;
+}
+.about-gonafun{
+    width: 90%;
+}
+.about-gonafun p{
+    width: 100%;
+}
+.about-gonafun>div{
+    width: 100%;
+}
+.background, .plan, .pro-plan, .profit, .relate{
+    width: 90%;
+}
+.origin, .goal, .logo, .stategy, .pic-map, .plan .SWOT{
+    width: 100%;
+}
+.stategy{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Environmental, .Customization{
+    width: 80%;
+}
+@media (max-width:520px){
+    .Environmental, .Customization{
+        width: 100%;
+    }
+    
+}
+.stategy p{
+    margin-bottom: 30px;
+}
+.term{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+@media (max-width:520px){
+    .term{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .short, .mid, .long{
+        float: none;
+        width: 100%;
+    }
+    .l
+    
+}
+.short, .mid, .long{
+    float: right;
+    width: 80%;
+}
+.logo img{
+    width: 100%;
+}
+.colors img{
+    width: 80%;
+}
+.about-gonafun li{
+    margin-right: 30px;
+}
+@media (max-width:400px){
+    .about-gonafun li{
+        margin-right: 15px;
+    }
+    
+}
+
+@media (max-width:400px){
+    .colors{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        width: 100%;
+        gap: 10px;
+    }
+    
+}
+.relate>div{
+    width: 100%;
+}
+
+/* WORK1-2版面設定 */
+.layout{
+    width: 100%;
+}
+.sitemap img, .flowchart img, .styleguide img{
+    width: 100%;
+}
+.styleguide{
+    width: 100%;
+}
+.styleguide img{
+    width: 90%;
+}
+.screenshow1 img, .screenshow2 img, .screenshow3 img{
+    width: 480px;
+    height: auto;
+}
+.picscreens{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.screen {
+    margin-bottom: 20px;
+}
+.screen-detal1, .screen-detal2, .screen-detal3{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.styleguide>div h6{
+    text-align: center;
+    align-items: center;
+}
+.about-cont, .footer{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.about-header{
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.Wireflame-Mockups img{
+    width: 100%;
+    margin: 0 10px;
+}
+.column3{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.column5{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+@media (max-width:520px){
+    .mockups{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .s-m-l{
+        width: 100%;
+    }
+    .l-mockups{
+        width: 100%;
+    }
+    .l-mockups img, ..s-m-l img{
+        width: 100%;
+    }
+}
+
+/* WORK1-3版面設定 */
+.product{
+    width: 100%;
+}
+.product .pics{
+    gap: 30px;
+}
+.pic-show2{
+    width: 90%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.pic-show3, .pic-show4{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pic-show2>div{
+    width: 90%;
+}
+.pic-show2 img, .pic-show4 img{
+    width: 90%;
+}
+
+.pic-show3 img{
+    width: 50%;
+}
+@media (max-width:520px){
+    .pic-show1 img{
+        width: 90%;
+    }
+    .small-pics{
+        width: 75%;
+    }
+    .pic-show1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+    .pic-tag {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .pic-show3 img{
+        width: 100%;
+    }
+}
+
+/* WORK2版面設定 */
+.coffee-logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 20px 0;
+}
+.coffee img{
+    width: 25%;
+}
+.logoatext{
+    width: 60%;
+}
+.coffee{
+    width: 100%;
+    margin: 0;
+}
+.coff-smalllogo{
+    width: 100%;
+    gap: 50px;
+}
+.cofeeproduts{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+.p1, .p2, .p3{
+    width: 100%;
+    height: 500px;
+    margin: 0;
+}
+
+@media (max-width:520px){
+    .jobworks p{
+        font-size: var(--small);
+    }
+    .coffee-logo{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+    .logoatext{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align-last: center;
+    }
+    .coff-smalllogo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .p1, .p2, .p3{
+        width: 100%;
+        height: 375px;
+        margin: 0;
+    }
+    @media (max-width:400px){
+        .p1, .p2, .p3{
+            width: 100%;
+            height: 275px;
+            margin: 0;
+        }
+    }
+    
+}
